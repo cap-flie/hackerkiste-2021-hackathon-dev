@@ -12,7 +12,7 @@ terraform {
     resource_group_name  = "meta"
     storage_account_name = "hackathonterraform"
     container_name       = "tfstate"
-    key                  = "***CHANGEME****.tfstate"
+    key                  = "flolie.tfstate"
   }
 }
 
