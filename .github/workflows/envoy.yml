@@ -1,5 +1,5 @@
 name: 'Stage 5 Envoy'
-on: [workflow_dispatch]
+on: [push]
 
 
 jobs:
