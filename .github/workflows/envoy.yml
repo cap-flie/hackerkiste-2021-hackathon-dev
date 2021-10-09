@@ -35,11 +35,11 @@ jobs:
           
       # Build Old NGINX Frontend
       - name: Build NGINX Base Frontend
-        run: docker build -t ${{ env.registryLoginServer }}/envoy:latest ./stage_5_envoy/envoy
+        run: docker build -t ${{ env.registryLoginServer }}/envoy:latest ./stage_5_envoy/envoy/
 
       - name: Push NGINX Base Frontend
         run: docker push ${{ env.registryLoginServer }}/envoy:latest
 
       - name: Deploy Manifests
         run: |
-          kubectl apply -f ./stage_5_SingleContainer/
+          kubectl apply -f ./stage_5_envoy/
