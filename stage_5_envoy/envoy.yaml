@@ -11,6 +11,10 @@ spec:
     port: 80
     targetPort: http
     protocol: TCP
+  - name: http
+    port: 9901
+    targetPort: http
+    protocol: TCP
   selector:
     app: myapp-envoy
 ---

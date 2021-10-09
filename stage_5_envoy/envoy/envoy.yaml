@@ -20,13 +20,13 @@ static_resources:
               domains: ["*"]
               routes:
               - match: { prefix: "/" }
-                route: { host_rewrite: myapp, cluster: myapp_cluster, timeout: 60s }
+                route: { host_rewrite: nginx, cluster: nginx_cluster, timeout: 60s }
           http_filters:
           - name: envoy.router
   clusters:
-  - name: myapp_cluster
+  - name: nginx_cluster
     connect_timeout: 0.25s
     type: STRICT_DNS
     dns_lookup_family: V4_ONLY
     lb_policy: LEAST_REQUEST
-    hosts: [{ socket_address: { address: myapp, port_value: 80 }}]
+    hosts: [{ socket_address: { address: nginx, port_value: 80 }}]
