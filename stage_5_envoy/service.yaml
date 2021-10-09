@@ -32,7 +32,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: myapp
+      - name: ngins
         image: 2021hackathon.azurecr.io/nginx:latest
         ports:
         - containerPort: 80
