@@ -5,7 +5,7 @@ metadata:
   labels:
     app: myapp-envoy
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
